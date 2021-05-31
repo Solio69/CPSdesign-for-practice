@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="style.css" rel="stylesheet"> 
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>   
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <header class="header">
+                <div class="header__direction">
+                    <!-- burger -->
+                    <div class="header__burger-wrapper">
+                        <button type="button" class="icon-btn header__burger-before">
+                            <img class="icon-btn__img" src="images/btn-burger.svg" alt="burger">
+                        </button>
+                    </div>
+                    
+                    <!-- logo -->
+                    <div class="header__logo">
+                        <a class="logo" href="#">
+                            <img src="images/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="header__direction">
+                    <!-- feedback -->
+                    <div class="feedback-btns feedback-btns__header">
+                        <button type="button" class="icon-btn">
+                           <img class="icon-btn__img" src="images/btn-call.svg" alt="call">
+                        </button> 
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-chat.svg" alt="chat">
+                        </button> 
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-profile.svg" alt="profile">
+                        </button> 
+                    </div>
+
+                    <div class="header__repair-before">
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-repair.svg" alt="repair">
+                        </button>
+                    </div>
+                    <button type="button" class="icon-btn icon-btn_margin-none">
+                        <img class="icon-btn__img" src="images/btn-checkstatus.svg" alt="checkstatus">
+                    </button>
+                </div>
+                
+           
+        </header>
+
+        <!-- main -->
+        <main class="main">
+            <!-- main header -->
+            <div class="main__header">
+                <h1 class="main__title">Услуги и сервисы</h1>
+                <!-- main header buttons -->
+                <div class="main__btn-wrapper">
+                    <button type="button" class="icon-btn main__btn-text">
+                        Оставить заявку
+                        <img class="icon-btn__img" src="images/btn-repair.svg" alt="repair">
+                    </button>
+                    <button type="button" class="icon-btn main__btn-text">
+                        Статус ремонта
+                        <img class="icon-btn__img" src="images/btn-checkstatus.svg" alt="checkstatus">
+                    </button>
+                </div>
+                
+            </div>
+            
+            
+            <nav class="main__menu">
+                <ul class="list-items">
+                    <li class="list-items__item active-main-nav">
+                        <a herf="">Ремонтируемые устройства</a>
+                    </li>
+                    <li class="list-items__item">
+                        <a herf="">Дополнительные услуги</a>
+                    </li>
+                    <li class="list-items__item">
+                        <a herf="">Цены на услуги</a>
+                    </li>
+                    <li class="list-items__item">
+                        <a herf="">Адреса сервисных центров</a>
+                    </li>
+                    <li class="list-items__item">
+                        <a herf="">Специальные цены</a>
+                    </li>
+                    <li class="list-items__item">
+                        <a herf="">Отзывы</a>
+                    </li>
+                </ul>
+            </nav>
+            <article class="service-info">
+                <div class="service-info__text-wrapper">
+                    <section class="service-info__text">
+                        <p>
+                            Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                        </p>
+                        <p>
+                            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                        </p>
+                    </section>
+                    <div class="service-info__show-all">
+                        <div class="show-all">
+                            <img src="images/up-arrow.svg" alt="read more">
+                            <button>
+                                Читать далее
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <section class="service-info__img">
+                    <img src="images/service.jpg" alt="service-info">
+                </section>
+            </article>
+
+            
+            <!-- brands -->
+            <div class="main__title-box">
+                <h3>Ремонт техники различных брендов</h3>
+            </div>
+            <div class="swiper-container">
+                <section class="brands swiper-wrapper">
+                    <div class="brands__item swiper-slide">
+                        <img class="brands__logo" src="images/brand-lenovo.png" alt="lenovo">
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-go.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <div class="brands__item swiper-slide">
+                        <img class="brands__logo" src="images/brand-samung.png" alt="samung">
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-go.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <div class="brands__item swiper-slide">
+                        <img class="brands__logo" src="images/brand-aple.png" alt="aple">
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-go.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <div class="brands__item swiper-slide">
+                        <img class="brands__logo" src="images/brand-viewSonic.png" alt="viewSonic">
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-go.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <div class="brands__item swiper-slide">
+                        <img class="brands__logo" src="images/brand-bosh.png" alt="bosh">
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-go.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <div class="brands__item swiper-slide">
+                        <img class="brands__logo" src="images/brand-hp.png" alt="hp">
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-go.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <div class="brands__item swiper-slide">
+                        <img class="brands__logo" src="images/brand-acer.png" alt="acer">
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-go.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <div class="brands__item swiper-slide">
+                        <img class="brands__logo" src="images/brand-sony.png" alt="sony">
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-go.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <div class="brands__item swiper-slide">
+                        <img class="brands__logo" src="images/brand-lenovo.png" alt="lenovo">
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-go.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <div class="brands__item swiper-slide">
+                        <img class="brands__logo" src="images/brand-samung.png" alt="samung">
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-go.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <div class="brands__item swiper-slide">
+                        <img class="brands__logo" src="images/brand-aple.png" alt="aple">
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-go.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <div class="brands__item swiper-slide">
+                        <img class="brands__logo" src="images/brand-acer.png" alt="acer">
+                        <button type="button" class="icon-btn">
+                            <img class="icon-btn__img" src="images/btn-go.svg" alt="arrow">
+                        </button>
+                    </div>
+                </section>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                
+                <div class="brands__show-all">
+                    <div class="show-all" id="showBrands">
+                        <img src="images/up-arrow.svg" alt="read more">
+                        <button>
+                            Показать все
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

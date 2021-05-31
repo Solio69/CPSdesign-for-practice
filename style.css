@@ -1,0 +1,516 @@
+@font-face {
+    font-family: "TTLakes";
+    src: url('fonts/TTLakes-Medium.woff') format("woff"),
+    url('fonts/TTLakes-Bold.woff') format("woff"),
+    url('fonts/TTLakes-Light.woff') format("woff"),
+    url('fonts/TTLakes-Regular.woff') format("woff");
+    font-weight: 300;
+    font-style: normal;
+} 
+
+body{
+    /* для коректного растяжения sidebar на всю высоту экрана устройства */
+    height: 100vh;
+}
+body,h1,h3,ul,p{
+    margin: 0;
+    padding: 0;
+    font-family: "TTLakes";
+    color: #1B1C21;
+}
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+.container{
+    margin: 0 auto;
+
+}
+
+/* header */
+.feedback-btns__header,.main__btn-wrapper{
+    display: none;
+}
+.header,.header__direction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header{
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgba(217, 255, 245, 1);
+    padding: 24px 16px;
+}
+
+/* icon-btn */
+.icon-btn{
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.icon-btn__img{
+    height: 40px;
+    width: 40px;
+}
+.icon-btn__img:hover{
+    transform: scale(1.2) ;
+    transition: 0.5s;
+}
+.icon-btn__img button:last-child{
+    margin-right: 0px;
+}
+.icon-btn_margin-none{
+    margin-right: 0px;
+}
+
+/* logo */
+.logo{
+    height: 50px;
+    width: 96px;
+}
+.logo img{
+    width: 100%;
+}
+
+.header__repair-before{
+    position: relative;
+}
+.header__repair-before::before{
+    content:"";
+    height: 32px;
+    width: 2px;
+    border-radius: 1px;
+    background-color: rgba(234, 234, 234, 1);
+    position: absolute;
+    left: -20px;
+}
+
+/* main */
+.main{
+    background-color: #F8F8F8;
+    /* для варианта с отриц. margin */
+    /* padding: 0 16px; */
+}
+.main__header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px; 
+
+    /* что бы не было отриц. margin */
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.main__title{
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6000000238418579px;
+    text-align: left;
+}
+.main__title::before {
+    content:"";
+    position: absolute;
+    left: 0;
+    background: url("images/highlight.svg") no-repeat center top/cover;
+    height: 40px;
+    width: 4px;
+}
+
+.main__btn-wrapper button:first-child{
+    padding-right: 32px;
+}
+.main__btn-text{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+.main__btn-text img{
+    padding-left: 8px;
+}
+.main__menu{
+    margin: 24px 0;
+
+    /* что бы не было отриц. margin */
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.list-items{
+    list-style-type: none;
+    display: flex;
+    overflow: scroll;
+    align-items: center;
+}
+.list-items__item{
+    white-space: nowrap;
+    color: #7E7E82;
+    padding: 8px 16px;
+}
+.active-main-nav{
+    background: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    box-sizing: border-box;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* выделение элемента по фокусу и ховеру */
+/* .list-items__item:hover, .list-items__item:focus {
+    background: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    box-sizing: border-box;
+    border-radius: 6px;
+    cursor: pointer;
+} */
+
+
+.service-info__img img{
+    width: 100%;
+}
+
+.service-info__text-wrapper{
+    /* что бы не было отриц. margin */
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.service-info__text{
+    height: 90px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    color: #1B1C21;
+}
+.service-info__text p{
+    margin-bottom: 2.3em;
+}
+.service-info__text p:last-child{
+    margin-bottom: 0;
+}
+.service-info__show-all{
+    margin-top: 16px;
+}
+
+.show-all button{
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    font-weight: 600;
+    padding-left: 16px;
+}
+
+.service-info__img{
+
+    /* для варианта с отриц. margin */
+    /* margin-left: -16px;
+    margin-right: -16px; */
+
+    box-sizing: border-box;
+
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+/*-------------------------------------- sidebar ---------------------------- */
+.sidebar{
+    height: 100%;
+
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    color: #1B1C21;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+.sidebar__header,.sidebar__header-direction{
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar__header, .sidebar__nav, .sidebar__footer{
+    margin: 0 24px;
+}
+.sidebar__header{
+    padding-top: 19px;
+    flex: 0 0 auto;
+}
+
+.sidebar__nav{
+    display: flex;
+    flex-direction: column;
+    padding-top: 51px;
+
+    flex: 1 1 auto;
+}
+.sidebar__nav ul{
+    list-style-type: none;
+}
+.sidebar__nav-list-item{
+    margin-bottom: 24px;
+    
+}
+
+.sidebar__nav-list-item a{
+    display: flex;
+    align-items: center;
+  
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    vertical-align: middle;
+}
+.sidebar__nav-list-item a:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.sidebar__nav-list-item > .active-sidebar-nav::before {
+    content:"";
+    position: absolute;
+    left: 0;
+    background: url("images/highlight.svg") no-repeat center top/cover;
+    height: 32px;
+    width: 4px;
+}
+.active-sidebar-nav{
+    opacity: 0.5;
+}
+.sidebar__footer{
+    padding-bottom: 32px;
+    flex: 0 0 auto;
+}
+
+.sidebar__footer-btns{
+    display: flex;
+}
+
+.sidebar__footer-email{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-top: 16px;
+}
+.sidebar__footer-tel{
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    font-weight: 900;
+    margin-top: 12px;
+}
+.sidebar-footer__language-btns{
+    margin-top: 8px;
+}
+.language-btns__item {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-weight: 800;
+    margin-right: 7px;
+}
+
+.language-btns button:last-child{
+    margin-right: 0;
+}
+
+.active-language{
+    opacity: 0.5;
+}
+.language-btns__item:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+/* --------------------- title-box ------------------------------------------ */
+.main__title-box{
+    border-top: 1px solid #D9FFF5;
+    background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+}
+.main__title-box h3{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;  
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7E7E82;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* --------------------- brands --------------------------------------------- */
+
+.brands{
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 16px;
+    padding-top: 16px;
+    min-height: 0;
+}
+.brands__show-all{
+    display: none;
+}
+.brands div:last-child{
+    margin-right: 0;
+}
+.brands__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 240px;
+    height: 72px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 6px;
+
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+.brands__logo{
+    padding-left: 16px;
+}
+
+.swiper-pagination{
+    position: static;
+    margin-bottom: 24px;
+}
+.swiper-pagination span{
+    height: 12px;
+    width: 12px;
+    background: #DDDDDD;
+    margin-right: 12px;
+    
+}
+/* --------------------- media -----------------------------------------------*/
+@media (max-height: 678px){
+    body{
+        /* для коректного растяжения sidebar на всю высоту экрана устройства (при высоте менее 678px)*/
+        height: auto;
+    }
+}
+@media (min-height: 1024px) {
+    /* для коректного растяжения sidebar на всю высоту экрана устройства (для больших экранов)*/
+    .sidebar{
+        height: 1024px;
+    }
+}
+@media (min-width: 768px){
+    .header{
+        padding: 18px 24px;
+    }
+    .header__directions--center{
+        display:flex;
+    }
+    .feedback-btns{
+        display:flex;
+    }
+    .feedback-btns__header .icon-btn:last-child{
+        margin-right: 40px;
+    }
+    .header__burger-wrapper{
+        position: relative;
+    }
+    .header__burger-before::before{
+        position: absolute;
+        content:"";
+        height: 32px;
+        width: 2px;
+        left: 60px;
+
+        background: #EAEAEA;
+        border-radius: 1px;
+    }
+    .header__logo{
+        margin-left: 20px;
+    }
+    .main{
+        padding: 0 24px;
+    }
+    .service-info{
+        display: flex;
+    }
+    .service-info__text-wrapper{
+        width: 50%;
+    }
+    .service-info__img{
+        width: 50%;
+    }
+    .service-info__text{
+        height: 160px;
+        width: 312px;
+    }
+    .service-info__show-all{
+        margin-top: 10px;
+    }
+    
+    .brands__show-all{
+        display: block;
+        margin-top: 24px;
+        margin-bottom: 34px;
+    }
+    .main__title-box{
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+    .main__title-box h3{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .brands{
+        flex-wrap: wrap;
+        padding-left: 0;
+        padding-top: 24px;
+        margin-top: 32px;
+        
+        justify-content: space-between;
+        height: 160px;
+        overflow: hidden;
+    }
+  
+    .brands__item{
+        width: 224px;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1120px) {
+    .header{
+        display: none;
+    }
+    .main{
+        padding: 0 34px;
+    }
+    .main__btn-wrapper{
+        display: flex;
+    }
+    .main__header{
+        padding-top: 42px;
+    }
+    .list-items{
+        flex-wrap: wrap;
+        overflow: auto;
+    }
+    .service-info__text{
+        width: 490px;
+    }
+    .service-info__show-all{
+        margin-top: 14px;
+    }
+    .main__title-box{
+        margin-left: -32px;
+        margin-right: -32px;
+    }
+    .main__title-box h3{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+   
+}
+
